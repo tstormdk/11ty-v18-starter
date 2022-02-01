@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ Case Navn }}</title>
+</head>
+<body>
+    <header class="header">
+        <nav class="main__nav" aria-label="main navigation"><span class="logo"></span></nav>
+    </header>
+    <section class="case">
+        <header class="case__header">
+            <h2 class="case__title">{{ Case Navn }}</h2>
+            <div class="case__description">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat culpa incidunt, ratione ipsam maxime earum veniam eum atque eaque excepturi.</p>
+                <span class="case__link--stockimages">Photos:</span><a href="https://picsum.photos/" target="_new">picsum.photos/</a>
+                <span class="case__tags"> {{ case__tags }}</span>
+            </div>
+        </header>
+        <section class="case__imagegrid">
+            <picture class="case__image">
+                <source media="(min-width:650px)" srcset="https://picsum.photos/700">
+                <img src="https://picsum.photos/700" alt="{{ navn på case }}">
+            </picture>
+        </section>
+    </section>
+    <footer class="footer"></footer>
+</body>
+</html>
