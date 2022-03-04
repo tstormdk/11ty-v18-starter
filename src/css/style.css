@@ -43,7 +43,7 @@ picture {
     background-image: url("https://picsum.photos/1080/400?blur");
     background-size: cover;
     display: grid;
-    grid-rows: 4;
+    grid-template-rows: 4;
 }
 .main__nav{
     display: flex;
@@ -56,10 +56,50 @@ picture {
 }
 
 .header__intro{
-    color: var(--clr-dark-text);
-    
-    display: block;    
+    color: var(--clr-dark-text);   
 }
-.header_subtitle--animated{
+.header_subtitle {
     font-size: 3rem;
 }
+
+.animated {
+    text-indent: 8px;
+    color:red;
+  }
+.dotted{
+  display: block;
+  border-top: 1px white dotted;
+  height: 5px;
+}
+
+.addEntity::after{
+  content: "\27A4";
+  display: inline-block;
+  transform: rotate(90deg);
+}
+.BerlingskePil::after{
+  content: url('arrow.svg');
+}
+  .animated:before {
+    content: "a coder.";
+    /* animation: topToBottom 3s linear 1s infinite running slidein; */
+    animation: topToBottom 5s forwards infinite;
+  }
+  
+  @keyframes topToBottom {
+    0% {
+      content: "a coder.";
+    }
+    25% {
+      content: "crazy.";
+    }
+    50% {
+      content: "awesome.";
+    }
+    75% {
+      content: "groovy.";
+    }
+    100% {
+      content: "magic.";
+    }
+  }
